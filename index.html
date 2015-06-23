@@ -1,79 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="starter">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
-
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
+<!--     <link href="css/style.css" rel="stylesheet"> -->
     <!-- IF using Sass (run gulp sass first), then remove the CSS include above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
-
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
     <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
-
+<!--     <script src="cordova.js"></script> -->
     <!-- your app's js -->
     <script src="js/app.js"></script>
-  </head>
+    <script src="js/home.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/follow.js"></script>
+    <script src="js/settingsPage.js"></script>
+    <script src="js/register.js"></script>
 
-  <body ng-app="starter">
+  </head>
+  <body>
     <ion-pane>
 		<ion-header-bar class="bar bar-header bar-dark">
 			<h1 class="title">CEB One Mobile App</h1>
 		</ion-header-bar>
 	  
 		<ion-content class="has-header">
-			<div class="card">
-			<div class="item item-divider">
-				CEB
-			</div>
-			<div class="item item-text-wrap">
-				CEB is the world’s leading member-based advisory company. We have a unique view into what matters—and what works—when capitalizing on drivers of business performance. With more than 30 years of experience working with top companies to share, analyze, and apply proven practices, we begin with great outcomes and reverse engineer to help you unlock your full potential.
-			</div>
-
-			</div>
-			<div class="card">
-				<div class="item item-text-wrap">
-					Corporate Executive Board</br>
-					1919 North Lynn Street </br>
-					Arlington,VA 22209 </br>
-					United States</br>
-					+1-571-303-3000</br>
-					CEB.Support@executiveboard.com</br></br>
-
-					© 2015 CEB. All rights reserved.
-				</div>
-			</div>	
+			<div ng-view class="container-fluid"></div>
 		</ion-content>
-		
-		
+
 		<ion-footer-bar class="bar bar-footer bar-dark">
 			<div class="tabs-striped tabs-color-positive">
 				<div class="tabs tabs-icon-top">
-				  <a class="tab-item active" href="index.html">
+				  <a class="tab-item active" href="#/home">
 					<i class="icon ion-home"></i>
 					Home
 				  </a>
-				  <a class="tab-item"  href="menu.html">
+				  <a class="tab-item"  href="#/menu">
 					<i class="icon ion-easel"></i>
 					Menu
 				  </a>
-				  <a class="tab-item"  href="follow.html">
+				  <a class="tab-item"  href="#/follow">
 					<i class="icon ion-chatboxes"></i>
 					Follow
 				  </a>
 				  
-				  <a class="tab-item"  href="config.html">
+				  <a class="tab-item"  href="#/settingsPage">
 					<i class="icon ion-settings"></i>
 					Settings
 				  </a>
-				  <a class="tab-item"  href="register.html">
+				  <a class="tab-item"  href="#/register">
 					<i class="icon ion-android-cloud-done"></i> 
 					Register
 				  </a>
