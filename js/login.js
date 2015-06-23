@@ -1,16 +1,16 @@
 'use strict';
-angular.module('starter.register', ['ngRoute'])
+angular.module('starter.login', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/register', {
-    templateUrl: 'register.html',
-    controller: 'registerCtrl'
+  $routeProvider.when('/login', {
+    templateUrl: 'login.html',
+    controller: 'loginCtrl'
   });
 }])
 
-.controller('registerCtrl', registerFunc);
+.controller('loginCtrl', loginFunc);
 
-function registerFunc($scope, $window, $location){
+function loginFunc($scope, $window, $location){
 $scope.go = function ( path ) {
   $location.path( path );
 };
