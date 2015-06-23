@@ -37,20 +37,5 @@ $scope.login = function(){
 		});
 
 		}
-
-
-$scope.register = function(){
-	    var ref = new Firebase("https://glowing-fire-7224.firebaseio.com/");
-		ref.createUser({
-		email : $scope.user.usrName,
-		password : $scope.user.passwrd
-		}, function(error, userData) {
-		if (error) {
-		console.log("Error creating user:", error);
-		} else {
-		console.log("Successfully created user account with uid:", userData.uid);
-		}
-
-		});
-}	
+	
 }
