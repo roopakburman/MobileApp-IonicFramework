@@ -36,25 +36,25 @@
 
 		<ion-footer-bar class="bar bar-footer bar-dark">
 			<div class="tabs-striped tabs-color-positive">
-				<div class="tabs tabs-icon-top">
-				  <a class="tab-item active" href="#/home">
+				<div class="tabs tabs-icon-top" ng-controller="homeCtrl">
+				  <a class="tab-item" ng-class="{active: isActive('/home')}" href="#/home">
 					<i class="icon ion-home"></i>
 					Home
 				  </a>
-				  <a class="tab-item"  href="#/menu">
+				  <a class="tab-item" ng-class="{ active: isActive('/menu') }" href="#/menu">
 					<i class="icon ion-easel"></i>
 					Menu
 				  </a>
-				  <a class="tab-item"  href="#/follow">
+				  <a class="tab-item"  ng-class="{ active: isActive('/follow') }" href="#/follow">
 					<i class="icon ion-chatboxes"></i>
 					Follow
 				  </a>
 				  
-				  <a class="tab-item"  href="#/settingsPage">
-					<i class="icon ion-settings"></i>
+				  <a class="tab-item" ng-class="{ active: isActive('/settingsPage') }" href="#/settingsPage">
+					<i class="icon ion-settings" ></i>
 					Settings
 				  </a>
-				  <a class="tab-item"  href="#/register">
+				  <a class="tab-item"  ng-class="{ active: isActive('/register') }" href="#/register">
 					<i class="icon ion-android-cloud-done"></i> 
 					Register
 				  </a>
