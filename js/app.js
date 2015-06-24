@@ -3,26 +3,65 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic', 'ngRoute', 'starter.home', 'starter.menu', 'starter.settingsPage', 'starter.register', 'starter.follow', 'starter.login'])
+var starter = angular.module('starter', ['ionic', 'ngRoute', 'starter.home', 'starter.menu', 'starter.settingsPage', 'starter.register', 'starter.follow', 'starter.login'])
+
 .config(['$routeProvider', function($routeProvider, $scope) {
   $routeProvider.when('/starter', {
-    templateUrl: 'home.html',
+    templateUrl: 'global/index.html',
     controller: 'homeCtrl'
-  });
-$routeProvider.otherwise({redirectTo: '/login'});
+  })
+  	.when('/memberPages' ,{
+	templateUrl: "memberPages/memberHome.html",
+	resolve:{
+		"check":function($scope, $location){   //function to be resolved, accessFac and $location Injected
+			if(getAccess()){    //check if the user has permission -- This happens before the page loads
+				
+			}else{
+				$location.path('/');				//redirect user to home if it does not have permission.
+				alert("You don't have access here");
+			}
+		}
+	}
+	});
+  
+ $routeProvider.otherwise({redirectTo: 'global/login'});
  
 }])
 .controller('homeCtrl', homeFunc);
 /*With $scope*/
 function homeFunc($scope, $location) {
-   $scope.isActive = function (viewLocation) { 
+   
+	$scope.isActive = function (viewLocation) { 
         return (viewLocation === $location.path());
     };
+	
+	$scope.getAccess = function(){
+		this.access = true;
+	};
+	
+	};
 
+
+/* starter.factory('accessFac',function(){
+	var obj = {}
+	this.access = false;
+	obj.getPermission = function(){    //set the permission to true
+		this.access = true;
+	}
+	obj.checkPermission = function(){
+		return this.access;				//returns the users permission level 
+	}
+	return obj;
+}); */
+
+/* starter.controller('homeCtrl',function($scope, accessFac){
+	$scope.getAccess = function(){
+		accessFac.getPermission();       //call the method in acccessFac to allow the user permission.
+	}
 }
 
 
-
+) */
 
 
 

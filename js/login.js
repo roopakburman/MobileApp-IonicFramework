@@ -1,8 +1,8 @@
 'use strict';
-angular.module('starter.login', ['ngRoute'])
+var starter = angular.module('starter.login', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/login', {
+  $routeProvider.when('global/login', {
     templateUrl: 'login.html',
     controller: 'loginCtrl'
   });
@@ -29,9 +29,12 @@ $scope.login = function(){
 			if(authData.uid.includes('simplelogin')){		 
 /* 				window.location.href = '/www/#/home/';}
 			 else{window.location.href = '/app/#/view2/';}  */
-		alert(authData.uid);}else{alert('Try Again');}
+		/* alert(authData.uid); */
+		$scope.go('/memberPages');
+		}
 /* 			 window.location.href = '/app/angularjs_spa/#/view1/';}
 			 else{window.location.href = '/app/angularjs_spa/#/view2/';} */
+
 		}
 		},{
 			remember: "sessiononly"

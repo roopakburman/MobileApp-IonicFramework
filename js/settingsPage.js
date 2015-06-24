@@ -2,7 +2,7 @@
 angular.module('starter.settingsPage', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/settingsPage', {
+  $routeProvider.when('global/settingsPage', {
     templateUrl: 'settingsPage.html',
     controller: 'settingsPageCtrl'
   });

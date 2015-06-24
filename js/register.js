@@ -2,7 +2,7 @@
 angular.module('starter.register', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/register', {
+  $routeProvider.when('global/register', {
     templateUrl: 'register.html',
     controller: 'registerCtrl'
   });
