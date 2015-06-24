@@ -25,8 +25,9 @@ $scope.login = function(){
 		console.log("Login Failed!", error);
 		} else {
 		console.log("Authenticated successfully with payload:", authData);
-			 if(authData.password.email =='r@test.com'){
-/* 				window.location.href = '/app/#/view1/';}
+/* 			 if(authData.password.email =='r@test.com'){ */
+			if(authData.uid.includes('simplelogin')){		 
+/* 				window.location.href = '/www/#/home/';}
 			 else{window.location.href = '/app/#/view2/';}  */
 		alert(authData.uid);}else{alert('Try Again');}
 /* 			 window.location.href = '/app/angularjs_spa/#/view1/';}
