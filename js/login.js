@@ -18,7 +18,7 @@ $scope.login = function(){
 		var ref = new Firebase("https://glowing-fire-7224.firebaseio.com/");
 		
 		ref.authWithPassword({
-		email : $scope.user.userName,
+		email : $scope.user.uName,
 		password : $scope.user.password
 		}, function(error, authData) {
 		if (error) {
@@ -28,9 +28,9 @@ $scope.login = function(){
 			 if(authData.password.email =='r@test.com'){
 /* 				window.location.href = '/app/#/view1/';}
 			 else{window.location.href = '/app/#/view2/';}  */
-			 
-			 window.location.href = '/app/angularjs_spa/#/view1/';}
-			 else{window.location.href = '/app/angularjs_spa/#/view2/';}
+		alert(authData.uid);}else{alert('Try Again');}
+/* 			 window.location.href = '/app/angularjs_spa/#/view1/';}
+			 else{window.location.href = '/app/angularjs_spa/#/view2/';} */
 		}
 		},{
 			remember: "sessiononly"
