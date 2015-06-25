@@ -5,12 +5,12 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic', 'ngRoute', 'starter.home', 'starter.menu', 'starter.settingsPage', 'starter.register', 'starter.follow', 'starter.login'])
 
-.config(['$routeProvider', function($routeProvider, $scope) {
+.config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/starter', {
-    templateUrl: '/home.html',
+    templateUrl: 'home.html',
     controller: 'homeCtrl'
   });
- $routeProvider.otherwise({redirectTo: '/login'});
+ $routeProvider.otherwise({redirectTo: '/register'});
  
 }])
 
