@@ -10,7 +10,11 @@ angular.module('starter', ['ionic', 'ngRoute', 'starter.home', 'starter.menu', '
     templateUrl: 'home.html',
     controller: 'homeCtrl'
   });
- $routeProvider.otherwise({redirectTo: '/register'});
+  $routeProvider.when('/memberPages', {
+    templateUrl: 'memberHome.html',
+    controller: 'homeCtrl'
+  });
+  $routeProvider.otherwise({redirectTo: '/register'});
  
 }])
 
