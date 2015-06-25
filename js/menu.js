@@ -2,7 +2,7 @@
 angular.module('starter.menu', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('global/menu', {
+  $routeProvider.when('menu', {
     templateUrl: 'menu.html',
     controller: 'menuCtrl'
   });
