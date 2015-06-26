@@ -6,10 +6,7 @@ var starter = angular.module('starter.login', ['ngRoute'])
     templateUrl: 'login.html',
     controller: 'loginCtrl'
   });
-    $routeProvider.when('/memberHome', {
-    templateUrl: 'memberHome',
-    controller: 'mHomeCtrl'
-  });
+
 }])
 
 .controller('loginCtrl', loginFunc);
@@ -30,7 +27,7 @@ $scope.login = function(){
 		} else {
 		console.log("Authenticated successfully with payload:", authData);
 				
-				window.location.href = '/memberHome';
+				window.location.href = '#/memberHome';
 				
 
 		}

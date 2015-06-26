@@ -3,7 +3,7 @@ angular.module('starter.memberHome', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/memberHome', {
-    templateUrl: 'memberHome',
+    templateUrl: 'memberHome.html',
     controller: 'mHomeCtrl'
   });
 
