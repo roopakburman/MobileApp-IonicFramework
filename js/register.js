@@ -1,5 +1,5 @@
 'use strict';
-angular.module('starter.register', ['ngRoute'])
+var starter = angular.module('starter.register', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/register', {
@@ -14,8 +14,6 @@ function registerFunc($scope, $window, $location){
 $scope.go = function ( path ) {
   $location.path( path );
 };
-
-
 $scope.register = function(){
 	    var ref = new Firebase("https://glowing-fire-7224.firebaseio.com/");
 		ref.createUser({

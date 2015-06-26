@@ -6,12 +6,11 @@ var starter = angular.module('starter.login', ['ngRoute'])
     templateUrl: 'login.html',
     controller: 'loginCtrl'
   });
-
 }])
 
 .controller('loginCtrl', loginFunc);
 
-function loginFunc($scope){
+function loginFunc($scope, $window, $location){
 $scope.go = function ( path ) {
   $location.path( path );
 };
