@@ -2,7 +2,7 @@
 angular.module('starter.follow', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('global/follow', {
+  $routeProvider.when('/follow', {
     templateUrl: 'follow.html',
     controller: 'followCtrl'
   });

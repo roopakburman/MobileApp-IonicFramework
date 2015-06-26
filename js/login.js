@@ -2,7 +2,7 @@
 var starter = angular.module('starter.login', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('global/login', {
+  $routeProvider.when('/login', {
     templateUrl: 'login.html',
     controller: 'loginCtrl'
   });
@@ -25,15 +25,7 @@ $scope.login = function(){
 		console.log("Login Failed!", error);
 		} else {
 		console.log("Authenticated successfully with payload:", authData);
-/* 			 if(authData.password.email =='r@test.com'){ */
-			if(authData.uid.includes('simplelogin')){		 
-/* 				window.location.href = '/www/#/home/';}
-			 else{window.location.href = '/app/#/view2/';}  */
-		/* alert(authData.uid); */
-		$scope.go('/memberPages');
-		}
-/* 			 window.location.href = '/app/angularjs_spa/#/view1/';}
-			 else{window.location.href = '/app/angularjs_spa/#/view2/';} */
+				window.location.href = '/memberPages';
 
 		}
 		},{

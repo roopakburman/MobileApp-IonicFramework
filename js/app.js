@@ -5,28 +5,19 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic', 'ngRoute', 'starter.home', 'starter.menu', 'starter.settingsPage', 'starter.register', 'starter.follow', 'starter.login'])
 
-.config(['$routeProvider', function($routeProvider, $scope) {
+.config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/starter', {
-    templateUrl: '/index.html',
+    templateUrl: 'home.html',
     controller: 'homeCtrl'
-  })
-  	.when('/memberPages' ,{
-	templateUrl: "memberPages/memberHome.html",
-	resolve:{
-		"check":function($scope, $location){   //function to be resolved, accessFac and $location Injected
-			if(getAccess()){    //check if the user has permission -- This happens before the page loads
-				
-			}else{
-				$location.path('/');				//redirect user to home if it does not have permission.
-				alert("You don't have access here");
-			}
-		}
-	}
-	});
-  
- $routeProvider.otherwise({redirectTo: '/register'});
+  });
+  $routeProvider.when('/memberPages', {
+    templateUrl: 'memberHome.html',
+    controller: 'homeCtrl'
+  });
+  $routeProvider.otherwise({redirectTo: '/register'});
  
 }])
+
 .controller('homeCtrl', homeFunc);
 /*With $scope*/
 function homeFunc($scope, $location) {
