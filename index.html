@@ -39,24 +39,32 @@
 		<ion-footer-bar class="bar bar-footer bar-dark">
 			<div class="tabs-striped tabs-color-positive">
 				<div class="tabs tabs-icon-top" ng-controller="homeCtrl">
-				  <a class="tab-item" ng-class="{active: isActive('/home')}" href="#/home">
+<!-- 				  <span ngif='#/memberHome'><a class="tab-item" ng-class="{active: isActive('/memberHome')}" ng-href="#/memberHome">
+					<i class="icon ion-home"></i>
+					Member Home
+				  </a></span> -->
+				  <a class="tab-item" ng-class="{active: isActive('/home')}" ngif={'#/home'} ng-href="#/home">
 					<i class="icon ion-home"></i>
 					Home
 				  </a>
-				  <a class="tab-item" ng-class="{ active: isActive('/menu') }" href="#/menu">
+				  <a class="tab-item" ng-class="{ active: isActive('/menu') }" ng-href="#/menu">
 					<i class="icon ion-easel"></i>
 					Menu
 				  </a>
-				  <a class="tab-item"  ng-class="{ active: isActive('/follow') }" href="#/follow">
+<!-- 				  <span ngif='#/memberMenu'><a class="tab-item" ng-class="{ active: isActive('/memberMenu') }" ng-href="#/memberMenu">
+					<i class="icon ion-easel"></i>
+					Member Menu
+				  </a></span> -->
+				  <a class="tab-item"  ng-class="{ active: isActive('/follow') }" ng-href="#/follow">
 					<i class="icon ion-chatboxes"></i>
 					Follow
 				  </a>
 				  
-				  <a class="tab-item" ng-class="{ active: isActive('/settingsPage') }" href="#/settingsPage">
+				  <a class="tab-item" ng-class="{ active: isActive('/settingsPage') }" ng-href="#/settingsPage">
 					<i class="icon ion-settings" ></i>
 					Settings
 				  </a>
-				  <a class="tab-item"  ng-class="{ active: isActive('/register') }" href="#/register">
+				  <a class="tab-item"  ng-class="{ active: isActive('/register') }" ng-href="#/register">
 					<i class="icon ion-android-cloud-done"></i> 
 					Register
 				  </a>
