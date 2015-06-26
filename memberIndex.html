@@ -4,26 +4,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
-    <link href="../lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
 <!--     <link href="css/style.css" rel="stylesheet"> -->
     <!-- IF using Sass (run gulp sass first), then remove the CSS include above
     <link href="css/ionic.app.css" rel="stylesheet">-->
     <!-- ionic/angularjs js -->
-    <script src="../lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
   <!-- <script src="bower_components/angular/angular.js"></script> -->
-  <script src="../bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
     <!-- cordova script (this will be a 404 during development) -->
 	<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 <!--     <script src="cordova.js"></script> -->
     <!-- your app's js -->
-    <script src="../js/app.js"></script>
-    <script src="../js/home.js"></script>
-    <script src="../js/menu.js"></script>
-    <script src="../js/follow.js"></script>
-    <script src="../js/settingsPage.js"></script>
-    <script src="../js/register.js"></script>
-    <script src="../js/login.js"></script>
-    <script src="mHome.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/follow.js"></script>
+    <script src="js/settingsPage.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/mHome.js"></script>
   </head>
   <body>
     <ion-pane>
@@ -40,24 +40,24 @@
 				<div class="tabs tabs-icon-top" ng-controller="homeCtrl">
 				  <a class="tab-item" ng-class="{active: isActive('/home')}" href="#/home">
 					<i class="icon ion-home"></i>
-					Home
+					Member Home
 				  </a>
 				  <a class="tab-item" ng-class="{ active: isActive('/menu') }" href="#/menu">
 					<i class="icon ion-easel"></i>
-					Menu
+					Member Menu
 				  </a>
 				  <a class="tab-item"  ng-class="{ active: isActive('/follow') }" href="#/follow">
 					<i class="icon ion-chatboxes"></i>
-					Follow
+					Member Follow
 				  </a>
 				  
 				  <a class="tab-item" ng-class="{ active: isActive('/settingsPage') }" href="#/settingsPage">
 					<i class="icon ion-settings" ></i>
-					Settings
+					Member Settings
 				  </a>
 				  <a class="tab-item"  ng-class="{ active: isActive('/register') }" href="#/register">
 					<i class="icon ion-android-cloud-done"></i> 
-					Register
+					Member Register
 				  </a>
 				</div>
 			</div>

@@ -3,17 +3,14 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic', 'ngRoute', 'starter.home', 'starter.menu', 'starter.settingsPage', 'starter.register', 'starter.follow', 'starter.login', 'starter.mHome'])
+angular.module('starter', ['ionic', 'ngRoute', 'starter.home', 'starter.menu', 'starter.settingsPage', 'starter.register', 'starter.follow', 'starter.login', 'starter.memberHome'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/starter', {
     templateUrl: 'home.html',
     controller: 'homeCtrl'
   });
-  $routeProvider.when('/memberPages', {
-    templateUrl: 'memberIndex.html',
-    controller: 'mHomeCtrl'
-  });
+/*  */
   $routeProvider.otherwise({redirectTo: '/register'});
  
 }])

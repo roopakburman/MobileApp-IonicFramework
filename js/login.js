@@ -6,11 +6,15 @@ var starter = angular.module('starter.login', ['ngRoute'])
     templateUrl: 'login.html',
     controller: 'loginCtrl'
   });
+    $routeProvider.when('/memberHome', {
+    templateUrl: 'memberHome',
+    controller: 'mHomeCtrl'
+  });
 }])
 
 .controller('loginCtrl', loginFunc);
 
-function loginFunc($scope, $window, $location){
+function loginFunc($scope){
 $scope.go = function ( path ) {
   $location.path( path );
 };
@@ -25,7 +29,9 @@ $scope.login = function(){
 		console.log("Login Failed!", error);
 		} else {
 		console.log("Authenticated successfully with payload:", authData);
-				window.location.href = '/memberPages';
+				
+				window.location.href = '/memberHome';
+				
 
 		}
 		},{

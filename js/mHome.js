@@ -1,16 +1,19 @@
 'use strict';
-angular.module('starter.mHome', ['ngRoute'])
+angular.module('starter.memberHome', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/memberPages', {
-    templateUrl: 'memberHome.html',
+  $routeProvider.when('/memberHome', {
+    templateUrl: 'memberHome',
     controller: 'mHomeCtrl'
   });
+
 }])
 
-.controller('mHomeCtrl', homeFunc);
+.controller('mHomeCtrl', mHomeFunc);
 
-function homeFunc(){
+function mHomeFunc($scope, $window, $location){
 	/* alert('Aloha home again!!'); */
-	
-}
+/* 	$scope.go = function ( path ) {
+  $location.path( path ); */
+};
+
