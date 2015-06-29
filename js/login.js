@@ -27,8 +27,6 @@ $scope.login = function(){
 		console.log("Authenticated successfully with payload:", authData);
 				
 				window.location.href = '#/memberHome';
-				
-
 		}
 		},{
 			remember: "sessiononly"
