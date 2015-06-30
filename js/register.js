@@ -9,7 +9,6 @@ var starter = angular.module('starter.register', ['ngRoute'])
 }])
 
 .controller('registerCtrl', registerFunc);
-
 function registerFunc($scope, $window, $location){
 $scope.go = function ( path ) {
   $location.path( path );
@@ -17,8 +16,8 @@ $scope.go = function ( path ) {
 $scope.register = function(){
 	    var ref = new Firebase("https://glowing-fire-7224.firebaseio.com/");
 		ref.createUser({
-		email : $scope.user.usrName,
-		password : $scope.user.passwrd
+		email : $scope.user.uEmail,
+		password : $scope.user.password
 		}, function(error, userData) {
 		if (error) {
 		console.log("Error creating user:", error);

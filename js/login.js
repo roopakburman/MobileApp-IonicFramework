@@ -9,7 +9,6 @@ var starter = angular.module('starter.login', ['ngRoute'])
 }])
 
 .controller('loginCtrl', loginFunc);
-
 function loginFunc($scope, $window, $location){
 $scope.go = function ( path ) {
   $location.path( path );
