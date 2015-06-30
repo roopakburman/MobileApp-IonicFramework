@@ -15,20 +15,17 @@ angular.module('starter', ['ionic', 'ngRoute', 'starter.home', 'starter.menu', '
  
 }])
 
-.controller('homeCtrl', homeFunc);
-/*With $scope*/
-function homeFunc($scope, $location) {
-   
-	$scope.isActive = function (viewLocation) { 
+.controller('homeCtrl', function homeFunc($scope, $location) {
+   	$scope.isActive = function (viewLocation) { 
         return (viewLocation === $location.path());
     };
-	
-/* 	$scope.getAccess = function(){
-		this.access = true;
-	}; */
-	
-	};
+	})
 
+/* .controller('SideMenuCtrl', function sideMenuFunc($scope, $ionicSideMenuDelegate){
+	$scope.toggleLeft = function() {
+    $ionicSideMenuDelegate.toggleLeft();
+  };
+}); */
 
 /* starter.factory('accessFac',function(){
 	var obj = {}
