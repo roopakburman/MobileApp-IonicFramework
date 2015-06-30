@@ -23,7 +23,7 @@ $scope.register = function(){
 		console.log("Error creating user:", error);
 		} else {
 		console.log("Successfully created user account with uid:", userData.uid);
-		$scope.user.uEmail.value="";
+		
 		}
 
 		});

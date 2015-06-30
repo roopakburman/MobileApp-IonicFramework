@@ -24,8 +24,8 @@ $scope.login = function(){
 		console.log("Login Failed!", error);
 		} else {
 		console.log("Authenticated successfully with payload:", authData);
-				
-				window.location.href = '#/memberHome';
+		window.location.href = '#/memberHome';
+		
 		}
 		},{
 			remember: "sessiononly"
