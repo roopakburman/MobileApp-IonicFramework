@@ -3,19 +3,35 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic', 'ngRoute', 'starter.home', 'starter.menu', 'starter.settingsPage', 'starter.register', 'starter.follow', 'starter.login', 'starter.memberHome'])
 
-.config(['$routeProvider', function($routeProvider) {
+/* var app = angular.module('starter', ['ionic', 'ngRoute', 'starter.home', 'starter.menu', 'starter.settingsPage', 'starter.register', 'starter.follow', 'starter.login', 'starter.memberHome'])
+app.config(function($stateProvider) {
+  $stateProvider
+  .state('starter', {
+    url: '/home',
+    templateUrl: 'home.html'
+  })
+  .state('register', {
+    url: '/register',
+    templateUrl: 'register.html'
+  })
+  
+  
+  ;
+}); */
+
+var app = angular.module('starter', ['ionic', 'ngRoute', 'starter.home', 'starter.menu', 'starter.settingsPage', 'starter.register', 'starter.follow', 'starter.login', 'starter.memberHome'])
+
+app.config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/starter', {
     templateUrl: 'home.html',
     controller: 'homeCtrl'
   });
-/*  */
   $routeProvider.otherwise({redirectTo: '/register'});
  
 }])
 
-.controller('homeCtrl', function homeFunc($scope, $location) {
+app.controller('homeCtrl', function homeFunc($scope, $location) {
    	$scope.isActive = function (viewLocation) { 
         return (viewLocation === $location.path());
     };
