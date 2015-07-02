@@ -19,9 +19,7 @@ app.config(function($stateProvider) {
   
   ;
 }); */
-
 var app = angular.module('starter', ['ionic', 'ngRoute', 'starter.home', 'starter.menu', 'starter.settingsPage', 'starter.register', 'starter.follow', 'starter.login', 'starter.memberHome'])
-
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/starter', {
     templateUrl: 'home.html',
@@ -30,7 +28,6 @@ app.config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/register'});
  
 }])
-
 app.controller('homeCtrl', function homeFunc($scope, $location) {
    	$scope.isActive = function (viewLocation) { 
         return (viewLocation === $location.path());
