@@ -7,9 +7,7 @@ angular.module('starter.home', ['ngRoute'])
     controller: 'homeCtrl'
   });
 }])
-
 .controller('homeCtrl', homeFunc);
-
 function homeFunc(){
 	/* alert('Aloha home again!!'); */
 	
