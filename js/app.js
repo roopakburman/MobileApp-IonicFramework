@@ -17,7 +17,6 @@ app.config(['$routeProvider', function($routeProvider) {
     controller: 'homeCtrl'
   });
   $routeProvider.otherwise({redirectTo: '/register'});
- 
 }])
 app.controller('homeCtrl', function homeFunc($scope, $location) {
    	$scope.isActive = function (viewLocation) { 
